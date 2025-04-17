@@ -1,43 +1,43 @@
 <?php
 
 /**
- * Plugin Name: Breakdance Custom Elements
- * Plugin URI: https://breakdance.com/
+ * Plugin Name: Avania Custom Elements
+ * Plugin URI: https://www.avania.fi/
  * Description: Boilerplate plugin to save your custom elements created with Element Studio.
- * Author: Breakdance
- * Author URI: https://breakdance.com/
+ * Author: Avania Consulting Oy
+ * Author URI: https://www.avania.fi/
  * License: GPLv2
  * Text Domain: breakdance
  * Domain Path: /languages/
  * Version: 0.0.1
  */
 
-namespace BreakdanceCustomElements;
+namespace AvaniaCustomElements;
 
 use function Breakdance\Util\getDirectoryPathRelativeToPluginFolder;
 
 add_action('breakdance_loaded', function () {
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/elements',
-        'BreakdanceCustomElements',
+        'AvaniaCustomElements',
         'element',
-        'Custom Elements',
+        'Avania Custom Elements',
         false
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/macros',
-        'BreakdanceCustomElements',
+        'AvaniaCustomElements',
         'macro',
-        'Custom Macros',
+        'Avania Custom Macros',
         false,
     );
 
     \Breakdance\ElementStudio\registerSaveLocation(
         getDirectoryPathRelativeToPluginFolder(__DIR__) . '/presets',
-        'BreakdanceCustomElements',
+        'AvaniaCustomElements',
         'preset',
-        'Custom Presets',
+        'Avania Custom Presets',
         false,
     );
 },
